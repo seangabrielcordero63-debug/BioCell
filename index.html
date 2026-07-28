@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Biological Archive — a warm, illustrated study of cell theory, plant vs animal cells, organelles, unicellular organisms, and plant tissues." />
+    <link rel="manifest" href="/manifest.json" />
+    <title>The Biological Archive — A Study of Cells</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/site.css" />
+  </head>
+  <body>
+    <!-- HERO / CELL THEORY -->
+    <section id="theory" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-veil"></div>
+      <div class="hero-content">
+        <span class="eyebrow">The Biological Archive</span>
+        <h1>The Architecture <em>of Life</em></h1>
+        <p>A journey from tissue to molecule — exploring cell theory, the machinery of organelles, and the living systems that build every organism on Earth.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="pillar-num">I</span><p>All living things are made of cells.</p></div>
+          <div class="pillar"><span class="pillar-num">II</span><p>The cell is the basic unit of life.</p></div>
+          <div class="pillar"><span class="pillar-num">III</span><p>All cells arise from pre-existing cells.</p></div>
+        </div>
+      </div>
+      <a href="#comparison" class="scroll-cue" aria-label="Scroll down">▾</a>
+    </section>
+
+    <!-- PLANT vs ANIMAL -->
+    <section id="comparison" class="section">
+      <div class="section-head">
+        <h2>Plant vs. Animal Cell</h2>
+        <p>Two expressions of the same fundamental unit — one builds walls and harvests light, the other moves and consumes.</p>
+      </div>
+      <div class="compare-grid">
+        <article class="card">
+          <div class="card-img"><img src="https://media.base44.com/images/public/6a685b0c527c197c4d0f6f0b/fb8e70534_generated_52a7518a.png" alt="Animal cell macro view" /></div>
+          <div class="card-body">
+            <div class="card-top"><h3>Animal Cell</h3><span class="tag">Heterotroph</span></div>
+            <ul>
+              <li>No cell wall — only a flexible membrane</li>
+              <li>Small, multiple vacuoles (if any)</li>
+              <li>No chloroplasts — relies on food</li>
+              <li>Irregular, fluid shifting shapes</li>
+              <li>Has centrioles &amp; lysosomes</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card plant">
+          <div class="card-img"><img src="https://media.base44.com/images/public/6a685b0c527c197c4d0f6f0b/bb9afe980_generated_0c74e083.png" alt="Plant cell macro view" /></div>
+          <div class="card-body">
+            <div class="card-top"><h3>Plant Cell</h3><span class="tag">Autotroph</span></div>
+            <ul>
+              <li>Rigid rectangular cell wall (cellulose)</li>
+              <li>Large central vacuole for storage &amp; support</li>
+              <li>Chloroplasts for photosynthesis</li>
+              <li>Regular, fixed geometric shape</li>
+              <li>Usually does not have centrioles</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ORGANELLES -->
+    <section id="organelles" class="section alt">
+      <div class="section-head">
+        <h2>The Organelle Atlas</h2>
+        <p>Each organelle is a specialized organ within the cell — select one to reveal its function.</p>
+      </div>
+      <div class="organelle-wrap">
+        <div class="organelle-list" id="organelle-list"></div>
+        <div class="organelle-detail" id="organelle-detail"></div>
+      </div>
+    </section>
+
+    <!-- UNICELLULAR -->
+    <section id="unicellular" class="section">
+      <div class="section-head">
+        <h2>Single-Celled Wonders</h2>
+        <p>One cell, complete life. These organisms prove that a single cell can feed, move, reproduce, and respond — all on its own.</p>
+      </div>
+      <div class="organism-grid" id="organism-grid"></div>
+    </section>
+
+    <!-- PLANT TISSUES -->
+    <section id="tissues" class="section alt">
+      <div class="section-head">
+        <h2>Plant Tissues &amp; Their Functions</h2>
+        <p>Cells organize into tissues, each with a specialized role that keeps a plant alive, growing, and feeding itself.</p>
+      </div>
+      <div class="tissue-grid" id="tissue-grid"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">The Biological Archive</div>
+          <p class="footer-sub">A study of cells — the building blocks of life.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#theory">Cell Theory</a>
+          <a href="#comparison">Plant vs Animal</a>
+          <a href="#organelles">Organelles</a>
+          <a href="#unicellular">Unicellular</a>
+          <a href="#tissues">Tissues</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- React mount point (required by platform) -->
+    <div id="root"></div>
+    <script type="module" src="src/main.jsx"></script>
+    <script src="src/site.js"></script>
+  </body>
+</html>

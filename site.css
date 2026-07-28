@@ -1,0 +1,232 @@
+:root {
+  --parchment: #fdf9f3;
+  --carbon: #1a1614;
+  --saffron: #d97706;
+  --moss: #71713e;
+  --blush: #fff1e6;
+  --border: #ecdcc7;
+  --muted: #8a7d6c;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+#root { display: none; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--parchment);
+  color: var(--carbon);
+  line-height: 1.6;
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://media.base44.com/images/public/6a685b0c527c197c4d0f6f0b/27399e4a4_generated_5245f82c.png') center/cover no-repeat;
+}
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(253,249,243,.45), rgba(253,249,243,.78), rgba(253,249,243,1));
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 60rem;
+  padding: 6rem 1.5rem;
+}
+.eyebrow {
+  display: inline-block;
+  padding: .4rem 1.1rem;
+  border: 1px solid rgba(217,119,6,.35);
+  border-radius: 999px;
+  font-size: .7rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(6px);
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: .95;
+  margin-top: 2rem;
+  letter-spacing: -.02em;
+}
+.hero h1 em { display: block; font-style: italic; color: var(--saffron); }
+.hero p {
+  max-width: 38rem;
+  margin: 2rem auto 0;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 48rem;
+  margin: 3rem auto 0;
+}
+.pillar {
+  text-align: left;
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(6px);
+}
+.pillar-num { font-family: var(--serif); font-size: 1.8rem; color: var(--saffron); }
+.pillar p { font-size: .9rem; margin-top: .4rem; color: var(--muted); }
+.scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,8px)} }
+
+/* ---------- SECTIONS ---------- */
+.section { padding: 7rem 1.5rem; max-width: 72rem; margin: 0 auto; }
+.section.alt { background: var(--blush); max-width: none; }
+.section.alt > * { max-width: 72rem; margin-left: auto; margin-right: auto; }
+.section-head { text-align: center; max-width: 40rem; margin: 0 auto; }
+.section-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  letter-spacing: -.02em;
+}
+.section-head p { margin-top: 1rem; color: var(--muted); font-size: 1.15rem; }
+
+/* ---------- COMPARE ---------- */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 4rem; }
+.card {
+  border: 1px solid var(--border);
+  border-radius: 1.6rem;
+  overflow: hidden;
+  background: #fff;
+}
+.card-img { aspect-ratio: 1 / 1; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 2.2rem; }
+.card-top { display: flex; align-items: baseline; justify-content: space-between; }
+.card-top h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--saffron); }
+.card.plant .card-top h3 { color: var(--moss); }
+.tag { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); }
+.card-body ul { list-style: none; margin-top: 1.5rem; }
+.card-body li { position: relative; padding-left: 1.3rem; margin-top: .8rem; font-size: .95rem; }
+.card-body li::before {
+  content: ''; position: absolute; left: 0; top: .6em;
+  width: .45rem; height: .45rem; border-radius: 50%; background: var(--saffron);
+}
+.card.plant li::before { background: var(--moss); }
+
+/* ---------- ORGANELLES ---------- */
+.organelle-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; margin-top: 4rem; }
+.organelle-list { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.org-btn {
+  text-align: left;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #fff;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all .2s ease;
+}
+.org-btn:hover { border-color: rgba(217,119,6,.5); }
+.org-btn.active { background: var(--saffron); color: #fff; border-color: var(--saffron); box-shadow: 0 8px 20px rgba(217,119,6,.25); }
+.org-btn .org-name { font-weight: 600; font-size: .95rem; }
+.org-btn .org-role { font-size: .78rem; margin-top: .25rem; color: var(--muted); }
+.org-btn.active .org-role { color: rgba(255,255,255,.85); }
+.organelle-detail {
+  border: 1px solid var(--border);
+  border-radius: 1.6rem;
+  background: #fff;
+  padding: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.organelle-detail .role { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--saffron); }
+.organelle-detail h3 { font-family: var(--serif); font-size: 2.4rem; margin-top: .6rem; }
+.organelle-detail p { margin-top: 1.3rem; color: var(--muted); font-size: 1.1rem; }
+
+/* ---------- ORGANISMS ---------- */
+.organism-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem; }
+.organism {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 1.6rem;
+  background: #fff;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.organism:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(154,118,66,.12); }
+.organism .dot {
+  width: 3rem; height: 3rem; border-radius: 50%;
+  background: rgba(217,119,6,.12);
+  display: flex; align-items: center; justify-content: center;
+}
+.organism .dot span { width: 1rem; height: 1rem; border-radius: 50%; background: var(--saffron); }
+.organism h3 { font-family: var(--serif); font-size: 1.5rem; margin-top: 1.3rem; }
+.organism p { font-size: .92rem; color: var(--muted); margin-top: .8rem; }
+
+/* ---------- TISSUES ---------- */
+.tissue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 4rem; }
+.tissue { padding: 2.2rem; border: 1px solid var(--border); border-radius: 1.6rem; background: #fff; }
+.tissue-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.tissue-top h3 { font-family: var(--serif); font-size: 1.6rem; }
+.tissue-role {
+  font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+  padding: .35rem .8rem; border-radius: 999px;
+  background: rgba(113,113,62,.12); color: var(--moss); white-space: nowrap;
+}
+.tissue > p { font-size: .95rem; color: var(--muted); margin-top: 1.1rem; }
+.tissue-items { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.3rem; }
+.tissue-items span {
+  font-size: .78rem; padding: .4rem .85rem; border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+/* ---------- FOOTER ---------- */
+.footer { border-top: 1px solid var(--border); padding: 3rem 1.5rem; }
+.footer-inner {
+  max-width: 72rem; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1.5rem;
+}
+.footer-brand { font-family: var(--serif); font-size: 1.3rem; }
+.footer-sub { font-size: .9rem; color: var(--muted); margin-top: .3rem; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.footer-nav a { font-size: .9rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+.footer-nav a:hover { color: var(--saffron); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .pillars { grid-template-columns: 1fr; }
+  .compare-grid, .organelle-wrap, .tissue-grid { grid-template-columns: 1fr; }
+  .organism-grid { grid-template-columns: 1fr; }
+  .section { padding: 5rem 1.25rem; }
+}
