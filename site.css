@@ -26,7 +26,7 @@ body {
 
 img { display: block; max-width: 100%; }
 
-/* ---------- HERO ---------- */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -108,7 +108,7 @@ img { display: block; max-width: 100%; }
 }
 @keyframes bounce { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,8px)} }
 
-/* ---------- SECTIONS ---------- */
+
 .section { padding: 7rem 1.5rem; max-width: 72rem; margin: 0 auto; }
 .section.alt { background: var(--blush); max-width: none; }
 .section.alt > * { max-width: 72rem; margin-left: auto; margin-right: auto; }
@@ -120,7 +120,7 @@ img { display: block; max-width: 100%; }
 }
 .section-head p { margin-top: 1rem; color: var(--muted); font-size: 1.15rem; }
 
-/* ---------- COMPARE ---------- */
+
 .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 4rem; }
 .card {
   border: 1px solid var(--border);
@@ -143,7 +143,7 @@ img { display: block; max-width: 100%; }
 }
 .card.plant li::before { background: var(--moss); }
 
-/* ---------- ORGANELLES ---------- */
+
 .organelle-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; margin-top: 4rem; }
 .organelle-list { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
 .org-btn {
@@ -174,7 +174,7 @@ img { display: block; max-width: 100%; }
 .organelle-detail h3 { font-family: var(--serif); font-size: 2.4rem; margin-top: .6rem; }
 .organelle-detail p { margin-top: 1.3rem; color: var(--muted); font-size: 1.1rem; }
 
-/* ---------- ORGANISMS ---------- */
+
 .organism-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem; }
 .organism {
   padding: 2rem;
@@ -193,7 +193,7 @@ img { display: block; max-width: 100%; }
 .organism h3 { font-family: var(--serif); font-size: 1.5rem; margin-top: 1.3rem; }
 .organism p { font-size: .92rem; color: var(--muted); margin-top: .8rem; }
 
-/* ---------- TISSUES ---------- */
+
 .tissue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 4rem; }
 .tissue { padding: 2.2rem; border: 1px solid var(--border); border-radius: 1.6rem; background: #fff; }
 .tissue-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
@@ -210,7 +210,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border);
 }
 
-/* ---------- FOOTER ---------- */
+
 .footer { border-top: 1px solid var(--border); padding: 3rem 1.5rem; }
 .footer-inner {
   max-width: 72rem; margin: 0 auto;
@@ -223,7 +223,7 @@ img { display: block; max-width: 100%; }
 .footer-nav a { font-size: .9rem; color: var(--muted); text-decoration: none; transition: color .2s; }
 .footer-nav a:hover { color: var(--saffron); }
 
-/* ---------- RESPONSIVE ---------- */
+
 @media (max-width: 768px) {
   .pillars { grid-template-columns: 1fr; }
   .compare-grid, .organelle-wrap, .tissue-grid { grid-template-columns: 1fr; }
